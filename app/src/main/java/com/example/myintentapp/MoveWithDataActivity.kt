@@ -12,7 +12,11 @@ class MoveWithDataActivity : AppCompatActivity() {
 
         val tvDataReceived: TextView = findViewById(R.id.tv_data_received)
 
-        val name = intent.getStringExtra()
+        val name = intent.getStringExtra(EXTRA_NAME)
+        val age = intent.getStringExtra(EXTRA_AGE)
+
+        val text = "Name : $name, Your Age : $age"
+        tvDataReceived.text = text
     }
 
     companion object {
